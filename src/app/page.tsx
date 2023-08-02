@@ -11,7 +11,7 @@ export default function Home() {
       >
         <Navbar />
         <Image
-          src="/header-bg.png"
+          src="/pictures/background/header-bg.png"
           width={800}
           height={800}
           alt="A laptop in a cyber punk style"
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="flex flex-col items-start space-y-4">
             <div className="flex items-start space-x-10">
               <Image
-                src="/monitor.png"
+                src="/pictures/icons/monitor.png"
                 width={70}
                 height={70}
                 alt="A monitor outline"
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="flex flex-col items-start space-y-4">
             <div className="flex items-start space-x-4">
               <Image
-                src="/design.png"
+                src="/pictures/icons/design.png"
                 width={70}
                 height={70}
                 alt="A monitor outline"
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="flex flex-col items-start space-y-4">
             <div className="flex items-start space-x-4">
               <Image
-                src="/design.png"
+                src="/pictures/icons/design.png"
                 width={70}
                 height={70}
                 alt="A monitor outline"
