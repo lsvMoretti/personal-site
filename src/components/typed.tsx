@@ -1,10 +1,14 @@
-'use client'
-
+import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import { useEffect, useRef } from 'react';
 
-const TypedComponent = ({ string, className, loop = false }) => {
-  const el = useRef(null);
+interface TypedComponentProps {
+  string: string;
+  className: string;
+  loop?: boolean;
+}
+
+const TypedComponent: React.FC<TypedComponentProps> = ({ string, className, loop = false }) => {
+  const el = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -19,7 +23,7 @@ const TypedComponent = ({ string, className, loop = false }) => {
     return () => {
       typed.destroy();
     };
-  }, [string]); // add string to dependency array so effect runs again if string changes
+  }, [string, loop]);
 
   return (
     <div className={className}>
