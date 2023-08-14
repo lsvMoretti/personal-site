@@ -26,6 +26,7 @@ const Navbar = () => {
                 <a className={linkClass} href="#home">{'<home />'}</a>
                 <a className={linkClass} href="#knowledge">{'<knowledge />'}</a>
                 <a className={linkClass} href="#work">{'<work />'}</a>
+                <a className={linkClass} href="#portfolio">{'<portfolio />'}</a>
             </div>
             <div id="targetDiv" ref={targetDiv}></div>
         </nav>
