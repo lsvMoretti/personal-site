@@ -2,28 +2,35 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
 interface TypedComponentProps {
-  string: string;
-  className: string;
+  strings: string[]; // Change to accept an array of strings
+  className?: string;
   loop?: boolean;
+  startDelay?: number; // Make startDelay optional
+  backDelay?: number;
+  loopCount?: number;
+  shuffle?:boolean;
 }
 
-const TypedComponent: React.FC<TypedComponentProps> = ({ string, className, loop = false }) => {
-  const el = useRef<HTMLSpanElement>(null);
+let TypedComponent: React.FC<TypedComponentProps> = ({ strings, className = '', loop = false, startDelay = 500, backDelay = 100, loopCount = Infinity, shuffle = false }) => {
+  let el = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [string],
-      startDelay: 300,
+    console.log('backdelay set to: ' + backDelay);
+    let typed = new Typed(el.current, {
+      strings: strings,
+      startDelay: startDelay,
       typeSpeed: 100,
       backSpeed: 100,
-      backDelay: 100,
+      backDelay: backDelay,
       loop: loop,
+      loopCount: loopCount,
+      shuffle: shuffle,
     });
 
     return () => {
       typed.destroy();
     };
-  }, [string, loop]);
+  }, [strings, loop, startDelay, backDelay, loopCount, shuffle]);
 
   return (
     <div className={className}>

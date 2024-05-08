@@ -21,7 +21,8 @@ module.exports = {
         'bg-img-top': '#030418',
         'bg-img-btm': '#060921',
         'off-white': '#D9D9D9',
-        'picton-blue': '#2CB4F2'
+        'picton-blue': '#2CB4F2',
+        'iasme-yellow': '#dca71f'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
