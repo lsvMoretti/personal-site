@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/accordion": "^2.0.11",
+    "@nextui-org/accordion": "^2.0.33",
     "@nextui-org/react": "^2.0.19",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
